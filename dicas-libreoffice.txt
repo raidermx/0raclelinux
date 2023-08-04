@@ -1,0 +1,14 @@
+libreofice
+
+fontwork  é equivalente a wordart
+
+
+Um problema que muitos têm quando se deparam com o LibreOffice / OpenOffice / BrOffice no Linux está relacionado às fontes. Arial, Times New Roman e cia. não estão disponíveis, porque são proprietárias da Microsoft, ou seja, ela possui todos os direitos sobre essas fontes. Existem textos que só podem ser redigidos em uma fonte específica, como por exemplo trabalhos acadêmicos, monografias, dissertações e teses de doutorado, que seguem as regras da ABNT, que por sua vez exige Arial ou Times New Roman.
+
+Liberation Serif é equivalente à Times New Roman
+
+Liberation Sans é equivalente à Arial
+
+Liberation Mono é equivalente à Courier New
+
+

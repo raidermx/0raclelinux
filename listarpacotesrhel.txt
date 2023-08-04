@@ -1,0 +1,36 @@
+3 maneiras de listar todos os pacotes instalados no RHEL, CentOS e Fedora
+
+Uma das várias funções de um administrador de sistema é rastrear os pacotes de software instalados/disponíveis em seu sistema, você pode aprender e/ou ter em mente alguns comandos rápidos.
+
+
+1. Usando o Gerenciador de Pacotes RPM
+O RPM (RPM Package Manager), anteriormente conhecido como Red-Hat Package Manager, é um gerenciador de pacotes de baixo nível e de código aberto, executado no Red Hat Enterprise Linux (RHEL), bem como em outros sistemas Linux, como CentOS, Fedora e UNIX.
+
+Você pode compará-lo com o DPKG Package Manager, o sistema de empacotamento padrão para Debian e seus derivados como Ubuntu, Kali Linux etc.
+
+O comando a seguir imprimirá uma lista de todos os pacotes instalados em seu sistema Linux, o sinalizador -q significa consulta e -a permite listar todos os pacotes instalados:
+
+# rpm -qa
+
+2. Usando o Gerenciador de Pacotes YUM
+
+YUM (Yellowdog Updater, Modified) é um gerenciador de pacotes interativo, front-end baseado em rpm.
+
+Você pode usar o comando yum abaixo para listar todos os pacotes instalados em seu sistema, uma vantagem desse método é que ele inclui o repositório do qual um pacote foi instalado:
+
+# yum list installed
+
+3. Usando YUM-Utils
+Yum-utils é uma variedade de ferramentas e programas para gerenciar repositórios yum, instalar pacotes de depuração, pacotes fonte, informações estendidas de repositórios e administração.
+
+Para instalá-lo, execute o comando abaixo como root, caso contrário, use o comando sudo:
+
+# yum update && yum install yum-utils
+Depois de instalá-lo, digite o comando repoquery abaixo para listar todos os pacotes instalados em seu sistema:
+
+# repoquery -a --installed 
+
+Para listar os pacotes instalados de um determinado repositório, use o programa yumdb no formulário abaixo:
+
+# yumdb search from_repo base
+

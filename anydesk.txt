@@ -1,0 +1,26 @@
+anydesk https://anydesk.com/pt/downloads/linux
+
+ORACLE LINUX
+
+Adicionar repositorio
+
+sudo tee /etc/yum.repos.d/anydesk.repo<<EOF
+[anydesk]
+name=AnyDesk CentOS - stable
+baseurl=http://rpm.anydesk.com/centos/8/x86_64/
+gpgcheck=1
+repo_gpgcheck=1
+gpgkey=https://keys.anydesk.com/repos/RPM-GPG-KEY
+EOF
+
+dnf update
+
+dnf install anydesk
+
+ou 
+
+dnf install mesa-libGLU-9.0.1-6.el9.x86_64
+
+wget -ct0 https://download.anydesk.com/linux/anydesk-6.2.1-1.el8.x86_64.rpm
+
+sudo rpm -i anydesk-6.2.1-1.el8.x86_64.rpm

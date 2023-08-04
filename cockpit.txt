@@ -1,0 +1,53 @@
+Como instalar o Cockpit em sistemas Linux
+Você pode instalar o Cockpit em todas as distribuições Linux a partir de seus repositórios oficiais padrão, conforme mostrado:
+
+Instale o Cockpit no Fedora e no CentOS
+Para instalar e ativar o Cockpit nas distribuições do Fedora, use os seguintes comandos.
+
+# yum install cockpit
+# systemctl enable --now cockpit.socket
+# firewall-cmd --add-service=cockpit
+# firewall-cmd --add-service=cockpit --permanent
+# firewall-cmd --reload
+Instale o Cockpit no Rocky Linux e AlmaLinux
+Para instalar e ativar o Cockpit nas distribuições Rocky/AlmaLinux, use os seguintes comandos.
+
+# yum install cockpit
+# systemctl enable --now cockpit.socket
+# firewall-cmd --add-service=cockpit
+# firewall-cmd --add-service=cockpit --permanent
+# firewall-cmd --reload
+Instalar Cockpit no RHEL
+Cockpit é adicionado ao repositório Red Hat Enterprise Linux Extras das versões 7.1 e posteriores:
+
+# yum install cockpit
+# systemctl enable --now cockpit.socket
+# firewall-cmd --add-service=cockpit --permanent
+# firewall-cmd --reload
+Instale o Cockpit no Debian
+O cockpit está incluído nos repositórios oficiais do Debian e você pode instalá-lo usando os seguintes comandos.
+
+# apt-get update
+# apt-get install cockpit
+# mkdir -p /usr/lib/x86_64-linux-gnu/udisks2/modules
+# ufw allow 9090
+# ufw allow 80
+Instale o Cockpit no Ubuntu e Linux Mint
+Nas distribuições Ubuntu e Linux Mint, o Cockpit não está incluído, mas você pode instalá-lo a partir do Cockpit PPA oficial executando os seguintes comandos:
+
+$ sudo add-apt-repository ppa:cockpit-project/cockpit
+$ sudo apt-get update
+$ sudo apt-get install cockpit
+$ sudo systemctl enable --now cockpit.socket
+Instale o Cockpit no Arch Linux
+Os usuários do Arch Linux podem instalar o Cockpit a partir do Arch User Repository usando o seguinte comando.
+
+# yaourt cockpit
+# systemctl start cockpit
+# systemctl enable cockpit.socket
+Como usar o cockpit no Linux
+Depois que o Cockpit for instalado com sucesso, você poderá acessá-lo usando um navegador da Web nos seguintes locais.
+
+https://ip-address:9090
+OR
+https://server.domain.com:9090

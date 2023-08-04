@@ -1,0 +1,58 @@
+firewalld
+
+sudo systemctl status firewalld
+
+sudo firewall-cmd --list-all --zone=work
+
+sudo firewall-cmd --list-services --zone=work
+cockpit dhcpv6-client ssh
+
+To allow access to a new service, use the --add-service service option. Optionally, include the --permanent option to make the rule persistent across reboots.
+
+For example, to add the HTTP and NFS services to the work zone, you would use the following command:
+
+
+
+sudo firewall-cmd --permanent --zone=work --add-service=http --add-service=nfs
+sudo firewall-cmd --list-services --zone=work
+cockpit dhcpv6-client ssh http nfs
+
+To remove access to a service, use the --remove-service service option:
+
+
+
+sudo firewall-cmd --permanent --zone=work --remove-service=cockpit
+sudo firewall-cmd --list-services --zone=work 
+dhcpv6-client ssh http nfs
+
+
+To start the service:
+
+
+sudo systemctl unmask firewalld
+
+
+sudo systemctl start firewalld
+
+
+To ensure that the service starts automatically when the system starts, run the following command after starting the firewall:
+
+sudo systemctl enable firewalld
+
+To stop the firewall service and prevent it from automatically starting when the system starts, run the following command:
+
+
+sudo systemctl stop firewalld
+
+
+sudo systemctl disable firewalld
+
+To prevent the firewall service from being started by other services or through the firewalld D-Bus interface, run the following command after disabling the firewall:
+
+
+sudo systemctl mask firewalld
+
+To display the current status of the firewall service:
+
+
+sudo systemctl status firewalld
