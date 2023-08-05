@@ -1,4 +1,13 @@
 https://yum.oracle.com/oracle-linux-isos.html
+https://www.oracle.com/linux/technologies/
+https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9
+
+repos:
+sudo dnf install --nogpgcheck https://dl.fedoraproject.org/pub/epel/epel-release-latest-$(rpm -E %rhel).noarch.rpm
+sudo dnf install --nogpgcheck https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-$(rpm -E %rhel).noarch.rpm https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-$(rpm -E %rhel).noarch.rpm
+
+pacotes: lm_sensors speedtest-cli vim neovim git curl testdisk ddrescue qphotorec smartmontools gsmartcontrol hwinfo lshw-gui
+htop 
 
 Oracle Linux Installation Media
 This page contains the ISO images for the three most recent updates to Oracle Linux releases. Since 2006, Oracle Linux has been completely free to download and use. Free source code, binaries, and updates. Freely redistributable. Free for production use.
