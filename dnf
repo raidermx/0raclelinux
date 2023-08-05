@@ -1,0 +1,22 @@
+Configure o DNF para downloads mais rápidos de pacotes
+
+Vários métodos podem aumentar a velocidade de download de pacotes no Fedora. Ao selecionar os espelhos mais rápidos, a velocidade de download do pacote pode aumentar.
+
+Além disso, se você tiver uma conexão de internet suficientemente rápida, o número de downloads paralelos pode ser alterado para obter downloads mais rápidos.
+
+Basta editar os arquivos de configuração DNF localizados em /etc/dnf/dnf.conf.
+
+Para isso, abra um terminal e digite:
+sudo nano /etc/dnf/dnf.conf
+
+Adicione a seguinte linha e salve:
+max_parallel_downloads=10
+
+Os espelhos mais rápidos funcionam selecionando o espelho com a menor latência. A diferença de velocidade pode ou não ser perceptível. Então, você só escolhe aumentar max_parallel_download como acima ou adicionar mais duas linhas da seguinte forma:
+fastestmirror=true
+deltarpm=true
+dnf update
+dnf upgrade
+
+
+  
