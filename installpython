@@ -1,0 +1,15 @@
+Installing Python on Oracle Linux 9
+
+Oracle Linux 9 includes the concept of Application Streams, where multiple versions of user-space components 
+can be delivered and updated more frequently than the core operating system packages in RPM format or groups 
+of related RPMs called Modules. The initial release of Oracle Linux 9 includes Python 3.9 as the full lifecycle 
+Python release; further python release may be released as AppStream Modules in the future.
+
+To install and run Python 3.9:
+$ sudo dnf install python3
+$ python
+
+To create a virtual environment using venv:
+$ python -m venv py39env
+$ source py39env/bin/activate
+
