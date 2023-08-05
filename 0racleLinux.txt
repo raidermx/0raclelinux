@@ -7,7 +7,253 @@ sudo dnf install --nogpgcheck https://dl.fedoraproject.org/pub/epel/epel-release
 sudo dnf install --nogpgcheck https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-$(rpm -E %rhel).noarch.rpm https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-$(rpm -E %rhel).noarch.rpm
 
 pacotes: lm_sensors speedtest-cli vim neovim git curl testdisk ddrescue qphotorec smartmontools gsmartcontrol hwinfo lshw-gui
-htop 
+htop yum-utils
+
+dnf update
+dnf upgrade
+dnf grouplist
+dnf groupinstall "grupo de pacotes"
+
+O parametro de uso do dnf é:
+dnf (opção)                                                                                                                                        
+Opções para o dnf
+autoremove
+dnf autoremove
+
+Remove todos os pacotes do sistema que foram originalmente instalados como dependências de outros pacotes instalados pelo usuário, mas que não são mais exigido por outros programas.
+check-update
+
+Faz uma verificação por atualizações de pacotes no sistema.
+dnf check-update
+
+Se seguido do nome de algum programa, verifica apenas a existência de atualizações para o pacote especificado.
+
+dnf check-update anaconda-*
+
+clean
+
+Executa a limpeza de arquivos temporários mantidos para repositórios. Isso inclui quaisquer dados deixados por trás de repositórios desativados ou removidos como bem como para diferentes versões de lançamento de distribuição.
+
+dnf clean dbcache
+
+Remove arquivos de cache gerados a partir dos metadados do repositório. Isso força o DNF a regenerar os arquivos de cache na próxima vez que ele for executado.
+
+dnf clean expire-cache
+
+Marca os metadados do repositório expirados. O DNF irá re-validar o cache para cada retomada na próxima vez que for usado.
+
+dnf clean metadata
+
+Remove metadados do repositório. Esses são os arquivos que o DNF usa para determinar a disponibilidade remota de pacotes. Usando esta opção
+Irá fazer o DNF baixar todos os metadados da próxima vez que for executado.
+
+dnf clean packages
+
+Remove todos os pacotes em cache do sistema.
+
+dnf clean all
+
+Faz tudo que os citados acima.
+
+distro-sync
+
+dnf distro-sync 
+
+Atualiza o sistema todo a partir dos repositórios habilitados.
+
+
+Também pode ser usado para atualizar pacotes específicos.
+
+dnf distro-sync kernel-* xorg-*
+
+
+downgrade
+
+dnf [opções] downgrade <package-installed-specs> ...
+
+Faz downgrade de pacotes, mas antes verifica se isso é possível.
+
+dnf downgrade gimp
+
+group
+
+Os grupos são coleções virtuais de pacotes.
+
+Para listar os grupos disponíveis.
+
+dnf group list
+
+Para obter informações de grupos relacionados a um determinado grupo ( Com aspas ).
+
+dnf group info "Ambiente de Trabalho Xfce"
+
+Para obter a lista de pacotes de um grupo ( Sem aspas ).
+
+dnf group info Ambiente de Trabalho Xfce
+
+Para instalar um determinado grupo.
+
+
+dnf group install "Ambiente de Trabalho Xfce"
+
+
+Para remover determinado grupo.
+
+dnf group remove "Ambiente de Trabalho Xfce"
+
+help
+
+Exibe os comandos do dnf com descrição.
+
+dnf help
+
+history
+
+Exibe um histórico do que foi feito pelo dnf.
+
+dnf history
+
+
+info
+
+Exibe informações detalhadas dos pacotes do repositório.
+
+dnf info
+
+Para exibir informações de determinado pacote.
+
+dnf info gimp
+
+
+install
+
+Para instalar um ou mais programas.
+
+dnf install gimp pinta conky
+
+list
+
+dnf list
+
+Lista todos os pacotes disponiveis no repositório.
+
+dnf list installed
+
+Lista todos os pacotes instalados
+
+dnf list available
+
+Lista os pacotes disponiveis.
+
+dnf list extras
+
+Lista os pacotes extras.
+
+dnf list obsoletes
+
+Lista os pacotes obsoletos
+
+dnf list recent
+
+Lista pacotes adicionados recentemente.
+
+dnf list upgrades
+
+Lista todos os pacotes para atualização.
+
+dnf list autoremove
+
+Lista pacotes que não tem dependências com outros e já não são mais usados por nenhum pacote.
+
+makecahe
+
+makecache
+
+
+Downloads e caches em metadados em formato binário para todos os repositórios recuperados conhecidos. Tenta evitar o download sempre que possível (por exemplo, quando o metadados locais ainda não expiraram ou quando o carimbo de data / hora do metadado não foi alterado).
+
+mark
+
+dnf mark install nome-pacote
+
+Marca determinado pacote como que instalado pelo usuário e não por outro pacote, útil quando quando não deseja que um pacote seja removido ao se aplicar um autoremove.
+
+dnf mark remove nome-pacote
+
+Desmarca o pacote como instalado pelo usuario, reverte o dnf mark install nome-pacote.
+
+
+provides
+
+dnf provides nome-pacote
+
+Informa a origem do pacote (Repositório)
+
+dnf provides gedit
+
+reinstall
+
+Para reinstalar um pacote ou vários pacotes ao mesmo tempo.
+
+dnf reinstall gimp
+
+remove
+
+Para remover um pacote ou vários pacotes ao mesmo tempo.
+
+dnf remove gimp
+
+repolist
+
+Lista os repositórios habilitados.
+
+dnf repolist
+
+repository-packages
+
+Exibe informações detalhadas dos pacotes de determinado repositório.
+
+dnf repository-packages fedora info
+
+O repository-packages tem muitas outras opções, consulte o manual do dnf.
+
+
+search
+
+Faz busca por pacotes, muito bom para quando você não sabe o nome exato do pacote, pode usar parte do nome.
+
+
+dnf search network-
+
+Também pode usar parte da descrição do pacote.
+
+dnf search "music player"
+
+
+updateinfo
+
+Para obter informações sobre o update do sistema.
+
+dnf updateinfo
+
+
+upgrade
+
+Atualiza todos os pacotes para a ultima versão disponivel nos repositórios.
+
+dnf upgrade
+
+
+upgrade-to
+
+Atualiza o pacote para uma versão especificada
+
+dnf upgrade-to pacote-versão
+
+Nessa matéria mostrei o básico do dnf, para aprofundar nos estudos leia a documentação, com o comando abaixo.
+
+man dnf
+
 
 Oracle Linux Installation Media
 This page contains the ISO images for the three most recent updates to Oracle Linux releases. Since 2006, Oracle Linux has been completely free to download and use. Free source code, binaries, and updates. Freely redistributable. Free for production use.
