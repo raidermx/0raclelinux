@@ -1,0 +1,48 @@
+instalar e configurar zsh:
+
+instalar pacotes
+sudo dnf install nodejs python3 ruby rust cargo yarnpkg
+
+instalar fontes:
+https://github.com/ryanoasis/nerd-fonts
+mkdir -p ~/.local/share/fonts
+cd ~/.local/share/fonts && curl -fLO https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/DroidSansMono/DroidSansMNerdFont-Regular.otf
+
+meslo-fonts
+https://github.com/andreberg/Meslo-Font/blob/master/dist/v1.2.1/Meslo%20LG%20DZ%20v1.2.1.zip
+descompactar e copiar para .local/shar/fonts
+
+[WARN] the folder /home/user/.local/bin is not on PATH, consider adding 'export PATH=/home/user/.local/bin:$PATH' to your /home/user/.zshenv
+
+
+instalar o zsh
+sudo dnf install zsh
+
+instalar o tema do zsh - https://github.com/romkatv/powerlevel10k
+
+
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+p10k configure -para configurar o tema.
+
+
+zsh auto-suggestions
+https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md
+
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+
+configurando o zsh
+sudo vim .zshrc
+source ~/powerlevel10k/powerlevel10k.zsh-theme
+export PATH=$PATH:$HOME/.cargo/bin
+export PATH=$PATH:$HOME/.local/bin
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+alterando o shell:
+chsh -s /usr/bin/zsh
+ou 
+vim /etc/passwd
+usuario.../usr/bin/zsh
+
+reboot
+
