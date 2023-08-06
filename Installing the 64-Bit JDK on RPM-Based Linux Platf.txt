@@ -1,0 +1,32 @@
+Installing the 64-Bit JDK on RPM-Based Linux Platforms
+You can install the JDK on 64-bit RPM-based Linux platforms, such as Red Hat and
+SuSE by using a downloadable RPM package file (.rpm ) in the system location.
+Note:
+You can install the JDK using a downloadable RPM package file on an OL
+system too, but the preferred way to install the JDK on OL systems is from
+Oracle Linux RPM repositories.
+Ensure that you have the root user access. You can do this by running the command
+su and entering the superuser password.
+To install the 64-bit JDK on an RPM-based Linux platform:
+1. Download the required file:
+• For x64 systems: jdk-20.interim.update.patch_linux-x64_bin.rpm . For
+example, jdk-20_linux-x64_bin.rpm
+• For aarch64 (64-bit ARM) systems: jdk-20.interim.update.patch_linux-
+aarch64_bin.rpm . For example, jdk-20_linux-aarch64_bin.rpm
+Before you download a file, you must accept the license agreement.
+2. Install the required package using the following command:
+$ sudo rpm -ivh jdk-20_linux-x64_bin.rpm
+OR
+$ sudo rpm -ivh jdk-20_linux-aarch64_bin.rpm
+Upgrade the required package using the following command:
+$ sudo rpm -Uvh jdk-20_linux-x64_bin.rpm
+OR
+$ sudo rpm -Uvh jdk-20_linux-aarch64_bin.rpm
+Note:
+JDK 20 can coexist with other feature releases of JDK. For each feature
+release, a separate directory is created, the default directory
+being /usr/lib/jvm/jdk-<FEATURE>-oracle-<ARCH> . For example, JDK
+20 releases for x64 will be installed in /usr/lib/jvm/jdk-20-oracle-x64
+directory.
+3. Delete the .rpm file if you want to save disk space.
+It is not required to reboot.
