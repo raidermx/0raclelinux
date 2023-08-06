@@ -3,8 +3,8 @@ instalando o tema flat-remix
 instale os pacotes:
 sudo dnf install glib2-devel ImageMagick
 
-habilitar o gnome-themes
-https://extensions.gnome.org/
+habilitar o user-themes
+https://extensions.gnome.org/extension/19/user-themes/
 
 vá para o diretorio do usuario e baixe os temas:
 
@@ -15,7 +15,7 @@ git clone https://github.com/daniruiz/flat-remix-gtk
 crie a pasta local
 mkdir -p ~/.icons && mkdir -p ~/.themes
 
-copie os temas para as pastas criadas
+copie os temas que estão dentro das pastas flat-remix e flat-remix-gtk para as pastas .icons e .themes
 cp -r flat-remix* ~/.icons/ && cp -r flat-remix-gtk* ~/.themes/
 
 
@@ -23,4 +23,4 @@ gsettings set org.gnome.shell.extensions.user-theme name "Flat-Remix-Blue-Light"
 
 reboot
 
-altere os temas com gnome-tweaks
+altere os temas com gnome-tweaks (ajustes)
