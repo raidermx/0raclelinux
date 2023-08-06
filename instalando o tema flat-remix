@@ -1,0 +1,20 @@
+instalando o tema flat-remix
+
+instale os pacotes:
+sudo dnf install glib2-devel ImageMagick
+
+vá para o diretorio do usuario e baixe os temas:
+
+git clone https://github.com/daniruiz/flat-remix
+
+git clone https://github.com/daniruiz/flat-remix-gtk
+
+crie a pasta local
+mkdir -p ~/.icons && mkdir -p ~/.themes
+
+copie os temas para as pastas criadas
+cp -r flat-remix/Flat-Remix* ~/.icons/ && cp -r flat-remix-gtk/Flat-Remix-GTK* ~/.themes/
+
+reboot
+
+altere os temas com gnome-tweaks
