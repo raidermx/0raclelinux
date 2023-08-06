@@ -13,7 +13,10 @@ crie a pasta local
 mkdir -p ~/.icons && mkdir -p ~/.themes
 
 copie os temas para as pastas criadas
-cp -r flat-remix/Flat-Remix* ~/.icons/ && cp -r flat-remix-gtk/Flat-Remix-GTK* ~/.themes/
+cp -r flat-remix* ~/.icons/ && cp -r flat-remix-gtk* ~/.themes/
+
+
+gsettings set org.gnome.shell.extensions.user-theme name "Flat-Remix-Blue-Light"
 
 reboot
 
