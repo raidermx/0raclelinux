@@ -1,0 +1,150 @@
+CentOS, Fedora, Oracle linux, redhat, rockylinux, almalinux
+
+These steps assume a most recent build of CentOS (currently tested on CentOS 7.5 x64 & Fedora 28 x64)
+
+Install the build tools sudo yum groupinstall -y 'Development Tools' 'C Development Tools and Libraries'
+
+Automatic configure script builder sudo yum install -y autoconf
+
+Needed for terminal handling sudo yum install -y ncurses-devel
+
+For building with wxWidgets (start observer or debugger!). Note that you may need to select the right wx-config before installing Erlang. sudo yum install -y wxGTK3-devel wxBase3
+
+For building ssl sudo yum install -y openssl-devel
+
+for jinterface sudo yum install -y java-1.8.0-openjdk-devel
+
+ODBC support sudo yum install -y libiodbc unixODBC-devel.x86_64 erlang-odbc.x86_64
+
+for the documentation to be built sudo yum install -y libxslt fop
+
+sudo dnf install fish
+
+sudo dnf install nodejs rust ruby python3 golang yarnpkg vim neovim 
+
+flatpak
+sudo apt install flatpak
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+sudo reboot
+
+sudo dnf install snapd
+sudo reboot
+
+
+java jdk oracle
+https://www.oracle.com/java/technologies/downloads/
+chmod +x jdk-20_linux-x64_bin.rpm
+sudo dnf install jdk-20_linxu-x64_bin.rpm
+
+sublime text
+sudo rpm -v --import https://download.sublimetext.com/sublimehq-rpm-pub.gpg
+sudo dnf config-manager --add-repo https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
+sudo dnf install sublime-text
+
+geany
+sudo dnf install geany
+
+atom
+flatpak install atom
+
+bluefish
+sudo dnf install bluefish
+
+brackets
+flatpak install flathub io.brackets.Brackets
+
+codeblocks
+flatpak install codeblocks
+
+delphi lazarus
+sudo dnf install fpc
+sudo dnf install lazarus
+
+vscode
+# cd /etc/yum.repos.d
+
+create a file, let's say vscode.repo with the following content:
+
+[vscode]
+name=vscode
+baseurl=https://packages.microsoft.com/yumrepos/vscode/
+enabled=1
+gpgcheck=1
+gpgkey=https://packages.microsoft.com/keys/microsoft.asc
+ 
+and now you can just do
+
+# yum install code
+
+asdf - https://asdf-vm.com/guide/getting-started.html 
+https://github.com/asdf-vm/asdf
+
+dnf install curl git
+
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.12.0
+
+Bash & Git
+
+Add the following to ~/.bashrc:
+shell
+
+. "$HOME/.asdf/asdf.sh"
+
+Completions must be configured by adding the following to your .bashrc:
+shell
+
+. "$HOME/.asdf/completions/asdf.bash"
+
+ZSH & Git
+
+Add the following to ~/.zshrc:
+shell
+
+. "$HOME/.asdf/asdf.sh"
+
+
+Nodejs
+yum install gnupg2 curl gawk
+asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+asdf plugin list all 
+asdf install nodejs latest
+asdf global nodejs latest
+asdf local nodejs latest
+asdf plugin update --all  
+
+ruby
+asdf plugin add ruby https://github.com/asdf-vm/asdf-ruby.git
+
+python
+asdf plugin-add python
+
+erlang
+asdf plugin add erlang https://github.com/asdf-vm/asdf-erlang.git
+
+elixir
+asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git
+
+kotlin
+asdf plugin add kotlin https://github.com/asdf-community/asdf-kotlin.git
+
+golang
+asdf plugin add golang https://github.com/asdf-community/asdf-golang.git
+
+rust
+asdf plugin-add rust https://github.com/code-lever/asdf-rust.git
+
+crystal
+asdf plugin-add crystal https://github.com/asdf-community/asdf-crystal.git
+
+haskell
+asdf plugin-add haskell https://github.com/vic/asdf-haskell.git
+
+
+
+
+
+
+
+
+
+
