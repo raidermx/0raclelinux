@@ -8,7 +8,7 @@ resources in the system improves a system's performance.
 UEFI firmwares do not support UEFI/MBR boot
 Refer to the following additional resources for information related to installation issues and
 system requirements:
-• <href> https://linux.oracle.com/hardware-certifications </href>
+• https://linux.oracle.com/hardware-certifications
 • The Release Notes of the Oracle Linux version you are installing at General Oracle Linux
 documentation
 • Unbreakable Enterprise Kernel documentation
