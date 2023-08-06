@@ -3,6 +3,9 @@ instalando o tema flat-remix
 instale os pacotes:
 sudo dnf install glib2-devel ImageMagick
 
+habilitar o gnome-themes
+https://extensions.gnome.org/
+
 vá para o diretorio do usuario e baixe os temas:
 
 git clone https://github.com/daniruiz/flat-remix
