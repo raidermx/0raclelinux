@@ -1,0 +1,14 @@
+System Requirements
+Verify that your system fulfills the following minimum requirements. In general, having more
+resources in the system improves a system's performance.
+• Minimum of 2 logical CPUs up to 2048 logical CPUs
+• 1.5 GB of memory per logical CPU, up to a maximum of 64 TB
+• At least 10 GB of disk space (20 GB is the recommended minimum)
+• On UEFI systems, ensure that the target disk uses GPT (GUID Partition Table), as some
+UEFI firmwares do not support UEFI/MBR boot
+Refer to the following additional resources for information related to installation issues and
+system requirements:
+• https://linux.oracle.com/hardware-certifications
+• The Release Notes of the Oracle Linux version you are installing at General Oracle Linux
+documentation
+• Unbreakable Enterprise Kernel documentation
