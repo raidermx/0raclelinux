@@ -1,7 +1,15 @@
-instalar e configurar zsh:
+instalar e configurar lvim e  zsh:
 
-instalar pacotes
-sudo dnf install nodejs python3 ruby rust cargo yarnpkg
+preparar sistema para instalar o lvim 
+instalar pacotes:
+sudo dnf install nodejs python3 ruby rust cargo ripgrep yarnpkg vim neovim lua compat-lua-devel
+sudo dnf install libtool autoconf automake cmake gcc gcc-c++ make pkgconfig unzip patch gettext curl git
+sudo dnf copr enable atim/lazygit -y
+sudo dnf install lazygit
+
+
+instalar lvim:
+LV_BRANCH='release-1.3/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.3/neovim-0.9/utils/installer/install.sh)
 
 instalar fontes:
 https://github.com/ryanoasis/nerd-fonts
@@ -10,7 +18,7 @@ cd ~/.local/share/fonts && curl -fLO https://github.com/ryanoasis/nerd-fonts/raw
 
 meslo-fonts
 https://github.com/andreberg/Meslo-Font/blob/master/dist/v1.2.1/Meslo%20LG%20DZ%20v1.2.1.zip
-descompactar e copiar para .local/shar/fonts
+descompactar e copiar para .local/share/fonts
 
 [WARN] the folder /home/user/.local/bin is not on PATH, consider adding 'export PATH=/home/user/.local/bin:$PATH' to your /home/user/.zshenv
 
