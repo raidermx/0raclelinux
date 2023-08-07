@@ -20,7 +20,8 @@ for the documentation to be built sudo yum install -y libxslt fop
 
 sudo dnf install fish
 
-sudo dnf install nodejs rust ruby python3 golang yarnpkg vim neovim 
+sudo dnf install nodejs rust cargo ruby python3 golang yarnpkg vim neovim 
+
 
 flatpak
 sudo apt install flatpak
