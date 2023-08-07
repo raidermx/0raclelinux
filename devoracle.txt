@@ -25,6 +25,10 @@ sudo dnf install libtool autoconf automake cmake gcc gcc-c++ make pkgconfig unzi
 sudo dnf copr enable atim/lazygit -y
 sudo dnf install lazygit
 
+lunarvim
+LV_BRANCH='release-1.3/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.3/neovim-0.9/utils/installer/install.sh)
+mkdir -p ~/.local/share/fonts
+cd ~/.local/share/fonts && curl -fLO https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/DroidSansMono/DroidSansMNerdFont-Regular.otf
 
 flatpak
 sudo apt install flatpak
@@ -32,6 +36,8 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 sudo reboot
 
 sudo dnf install snapd
+sudo systemctl enable --now snapd.socket
+sudo ln -s /var/lib/snapd/snap /snap
 sudo reboot
 
 
