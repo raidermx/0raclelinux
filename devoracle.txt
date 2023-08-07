@@ -20,7 +20,10 @@ for the documentation to be built sudo yum install -y libxslt fop
 
 sudo dnf install fish
 
-sudo dnf install nodejs rust cargo ruby python3 golang yarnpkg vim neovim 
+sudo dnf install nodejs python3 ruby rust cargo ripgrep golang yarnpkg vim neovim lua compat-lua-devel
+sudo dnf install libtool autoconf automake cmake gcc gcc-c++ make pkgconfig unzip patch gettext curl git
+sudo dnf copr enable atim/lazygit -y
+sudo dnf install lazygit
 
 
 flatpak
