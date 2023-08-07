@@ -3,6 +3,9 @@ https://yum.oracle.com/oracle-linux-isos.html
 https://www.oracle.com/linux/technologies/
 https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9
 
+acessando o menu do grub:
+Ao iniciar o sistema, mantenha a tecla SHIFT pressionada, caso esteja usando BIOS. Se estiver usando UEFI, pressione ESC.
+
 repos:
 sudo dnf install --nogpgcheck https://dl.fedoraproject.org/pub/epel/epel-release-latest-$(rpm -E %rhel).noarch.rpm
 sudo dnf install --nogpgcheck https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-$(rpm -E %rhel).noarch.rpm https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-$(rpm -E %rhel).noarch.rpm
