@@ -12,3 +12,37 @@ system requirements:
 • The Release Notes of the Oracle Linux version you are installing at General Oracle Linux
 documentation
 • Unbreakable Enterprise Kernel documentation
+
+
+O Oracle Linux é uma distribuição Linux de classe empresarial suportada pela Oracle e construída a partir de pacotes fonte para o Red Hat Enterprise Linux (RHEL).
+
+Alguns dos recursos especiais do Oracle Linux incluem um kernel Linux customizado e testado rigorosamente chamado “Oracle Unbreakable Kernel”, forte integração com produtos de hardware e software da Oracle, incluindo a maioria dos aplicativos de banco de dados, e “zero downtime patching” – um recurso que permite que administradores atualizem o kernel sem uma reinicialização.
+
+As versões mais recentes do Oracle Linux aprimoram a experiência do usuário em implantações no local, na nuvem e na borda, com foco na consistência operacional e na eficiência aprimorada, para acelerar o tempo de lançamento no mercado de ativos críticos de infraestrutura.
+O Oracle Linux agora oferece suporte a atualizações off-line.
+
+As atualizações off-line podem ajudar a proteger um sistema durante as atualizações executando instalações de pacote após uma reinicialização e antes do carregamento de bibliotecas que podem ser afetadas por atualizações de pacote.
+
+Com esse aprimoramento, os serviços em execução não serão afetados pelas atualizações do sistema operacional.
+
+Com atualizações offline, o DNF não aplica as atualizações diretamente, mas notifica o processo do systemd que as atualizações precisam ser aplicadas.
+
+O lançamento vêm com os pacotes Unbreakable Enterprise Kernel Release 7 Update 1 (UEK R7U1) e Red Hat Compatible Kernel (RHCK) mais recentes.
+
+O Oracle Linux 9 Update 2 vem com as seguintes opções de kernel:
+
+UEK R7U1, kernel-uek-5.15.0-101.103.2.1 para plataformas x86_64 e aarch64
+Kernel compatível com Red Hat (RHCK), kernel-5.14.0-284.11.1 para plataforma x86_64
+O Oracle Linux agora inclui um pacote de ferramentas de contêiner atualizado que oferece integração aprimorada entre o Oracle Linux e os tempos de execução de contêineres locais; este pacote inclui versões aprimoradas para as ferramentas Podman, Buildah, Skopeo, crun e runc.
+
+
+O Oracle Linux 9 Update 2 pode executar cargas de trabalho em contêiner no systemd para implantações mais confiáveis.
+
+Essa integração permite que o systemd gerencie dependências de serviço, monitore o ciclo de vida e o estado do serviço, reinicie serviços em caso de falha e gerencie atualizações/reversões automáticas para seus contêineres.
+
+O Podman 4.4, agora incluído no Oracle Linux 9 Update 2, adicionou o comando “podman generate systemd” para criar um arquivo de unidade diretamente de um contêiner em execução.
+
+Para saber mais sobre essa versão da distribuição, acesse a nota de lançamento.
+
+Baixe e experimente o Oracle Linux 9.2
+A imagem ISO do Oracle Linux 9.2 já pode ser baixada acessando a página de download da distribuição.
