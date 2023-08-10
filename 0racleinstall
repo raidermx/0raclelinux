@@ -24,8 +24,8 @@ fastestmirror=true
 deltarpm=true
 
 atualizar:
+sudo dnf upgrade --refresh 
 sudo dnf update
-sudo dnf upgrade
 
 habilitar repositórios do gnome-software e adicionar repositórios:
 
