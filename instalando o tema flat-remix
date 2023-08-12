@@ -5,6 +5,8 @@ sudo dnf install glib2-devel ImageMagick
 
 habilitar o user-themes
 https://extensions.gnome.org/extension/19/user-themes/
+system-monitor-next
+
 
 vá para o diretorio do usuario e baixe os temas:
 
