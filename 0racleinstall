@@ -57,10 +57,29 @@ sudo firewall-cmd --add-service=cockpit --permanent
 sudo firewall-cmd --reload
 
 instalar navegador:
-https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
+aria2c https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
+chmod +x google-chrome-stable_current_x86_64.rpm
+sudo dnf install google-chrome-stable_current_x86_64.rpm
 
 teamviewer:
-https://www.teamviewer.com/pt-br/download/linux/
+aria2c https://download.teamviewer.com/download/linux/teamviewer.x86_64.rpm
+chmod +x teamviewer.x86_64.rpm
+sudo dnf install teamviewer.x86_64.rpm
+
+## integração com o navegador
+https://addons.mozilla.org/en-US/firefox/addon/gnome-shell-integration/
+https://extensions.gnome.org/extension/615/appindicator-support/
+https://extensions.gnome.org/extension/19/user-themes/
+https://extensions.gnome.org/extension/120/system-monitor/
+
+## otimizar bateria do notebook
+  sudo dnf install tlp tlp-rdw
+  sudo systemctl enable tlp && tlp start
+  
+flatpak install Motrix
+flatpak inatall PeaZip
+flatpak install VideoDownloader
+
 
 configurar usuarios, serviços online, navegador e configurações de energia.
 
