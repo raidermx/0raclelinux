@@ -77,7 +77,7 @@ https://extensions.gnome.org/extension/120/system-monitor/
   sudo systemctl enable tlp && sudo tlp start
   
 flatpak install Motrix
-flatpak inatall PeaZip
+flatpak install PeaZip
 flatpak install VideoDownloader
 
 
