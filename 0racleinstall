@@ -74,7 +74,7 @@ https://extensions.gnome.org/extension/120/system-monitor/
 
 ## otimizar bateria do notebook
   sudo dnf install tlp tlp-rdw
-  sudo systemctl enable tlp && tlp start
+  sudo systemctl enable tlp && sudo tlp start
   
 flatpak install Motrix
 flatpak inatall PeaZip
