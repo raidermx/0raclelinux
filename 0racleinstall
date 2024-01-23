@@ -45,7 +45,7 @@ sudo ln -s /var/lib/snapd/snap /snap
 sudo reboot
 
 instalar pacotes:
-sudo dnf install  dnf-automatic ntfs-3g lm_sensors speedtest-cli vim neovim mc geany emacs git curl testdisk ddrescue qphotorec smartmontools gsmartcontrol hwinfo lshw-gui htop yum-utils tmux tmate timeshift gnome-tweaks dia gimp inkscape blender fish redshift ark file-roller filezilla arj cabextract p7zip lzip unrar unzip zip vlc
+sudo dnf install  dnf-automatic ntfs-3g lm_sensors speedtest-cli vim neovim mc geany emacs git curl testdisk ddrescue qphotorec smartmontools gsmartcontrol hwinfo lshw-gui htop yum-utils tmux tmate timeshift gnome-tweaks dia gimp inkscape blender fish redshift file-roller filezilla arj cabextract p7zip lzip unrar unzip zip vlc
 
 mudar o shell:
 chsh -s /usr/bin/fish
